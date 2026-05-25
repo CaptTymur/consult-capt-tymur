@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captain Tymur — Maritime Consulting</title>
+    <meta name="description" content="Independent maritime consulting by Captain Tymur Rudov. Career diagnostics for seafarers, shore transition, command transition. Owner-side operations diagnostics for shipowners.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://consult.capt-tymur.com/">
+    <meta property="og:title" content="Captain Tymur — Maritime Consulting">
+    <meta property="og:description" content="Career diagnostics for seafarers. Operations diagnostics for shipowners. Master Mariner + 3 years tech management + freight brokerage.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://consult.capt-tymur.com/">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Captain Tymur Maritime Consulting",
+        "description": "Independent maritime consulting for seafarers and shipowners.",
+        "url": "https://consult.capt-tymur.com/",
+        "email": "consult@capt-tymur.com",
+        "telephone": "+357-97-617-412",
+        "provider": {
+            "@type": "Person",
+            "name": "Tymur Rudov",
+            "jobTitle": ["Master Mariner", "Maritime Consultant", "Freight Broker"]
+        },
+        "areaServed": "Worldwide"
+    }
+    </script>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-secondary: #111827;
+            --bg-card: #1a2236;
+            --text-primary: #e8edf5;
+            --text-secondary: #8b95a8;
+            --accent: #3b82f6;
+            --accent-dim: rgba(59, 130, 246, 0.15);
+            --border: #1e293b;
+            --success: #10b981;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 1.25rem 0;
+            position: sticky;
+            top: 0;
+            background: rgba(10, 14, 23, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 100;
+        }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+        .brand { font-weight: 700; font-size: 1.05rem; color: var(--text-primary); text-decoration: none; }
+        .brand span { color: var(--accent); }
+        .nav { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+        .nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.92rem; transition: color 0.2s; }
+        .nav a:hover { color: var(--text-primary); }
+        .lang-toggle { display: flex; gap: 0.4rem; }
+        .lang-toggle button {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.82rem;
+        }
+        .lang-toggle button.active { background: var(--accent); color: white; border-color: var(--accent); }
+
+        .hero { padding: 5rem 0 4rem; text-align: center; }
+        .hero .eyebrow {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            padding: 0.3rem 0.9rem;
+            background: var(--accent-dim);
+            border-radius: 999px;
+            margin-bottom: 1.25rem;
+        }
+        .hero h1 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 1.25rem; max-width: 820px; margin-left: auto; margin-right: auto; }
+        .hero p.lead { color: var(--text-secondary); font-size: 1.1rem; max-width: 680px; margin: 0 auto 2rem; }
+        .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn-primary, .btn-secondary {
+            display: inline-block;
+            padding: 0.85rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-primary:hover { background: #2563eb; }
+        .btn-secondary { color: var(--text-primary); border-color: var(--border); }
+        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+        .audience-bar {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-bottom: 4rem;
+        }
+        .audience-bar a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            padding: 0.55rem 1.1rem;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            font-size: 0.88rem;
+            transition: all 0.2s;
+        }
+        .audience-bar a:hover { color: var(--text-primary); border-color: var(--accent); }
+
+        section { padding: 3.5rem 0; border-top: 1px solid var(--border); }
+        .section-header { text-align: center; margin-bottom: 2.5rem; }
+        .section-header .eyebrow {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            padding: 0.25rem 0.85rem;
+            background: var(--accent-dim);
+            border-radius: 999px;
+            margin-bottom: 0.9rem;
+        }
+        .section-header h2 { font-size: 1.95rem; margin-bottom: 0.6rem; }
+        .section-header p { color: var(--text-secondary); max-width: 640px; margin: 0 auto; }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .offer-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.9rem;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .offer-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35); }
+        .offer-card.featured { border-color: var(--accent); position: relative; }
+        .offer-card.featured::before {
+            content: attr(data-badge);
+            position: absolute;
+            top: -11px; left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .offer-card h3 { color: var(--accent); font-size: 1.2rem; margin-bottom: 0.4rem; }
+        .offer-card .for-whom { color: var(--text-secondary); font-size: 0.82rem; margin-bottom: 1rem; }
+        .offer-card .price { font-size: 2rem; font-weight: 700; color: var(--success); margin-bottom: 0.25rem; }
+        .offer-card .price-note { color: var(--text-secondary); font-size: 0.8rem; margin-bottom: 1.2rem; }
+        .offer-card ul { list-style: none; flex-grow: 1; margin-bottom: 1.5rem; }
+        .offer-card ul li {
+            color: var(--text-secondary);
+            padding: 0.35rem 0;
+            padding-left: 1.4rem;
+            position: relative;
+            font-size: 0.88rem;
+        }
+        .offer-card ul li::before { content: '✓'; position: absolute; left: 0; color: var(--success); font-weight: 700; }
+        .offer-card .btn {
+            display: block;
+            text-align: center;
+            padding: 0.8rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            margin-top: auto;
+            transition: background 0.2s;
+        }
+        .offer-card .btn:hover { background: #2563eb; }
+
+        .b2b-section { background: var(--bg-secondary); }
+        .b2b-card {
+            background: var(--bg-card);
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            padding: 2.5rem;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .b2b-card h3 { font-size: 1.4rem; color: var(--accent); margin-bottom: 0.5rem; }
+        .b2b-card .for-whom { color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.5rem; }
+        .b2b-card .pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.75rem; }
+        .b2b-card .pillar { padding: 1rem; background: var(--bg-primary); border-radius: 8px; }
+        .b2b-card .pillar h4 { color: var(--text-primary); font-size: 0.95rem; margin-bottom: 0.35rem; }
+        .b2b-card .pillar p { color: var(--text-secondary); font-size: 0.82rem; }
+        .b2b-card .price-line { padding: 1rem 1.25rem; background: var(--bg-primary); border-radius: 8px; margin-bottom: 1.5rem; }
+        .b2b-card .price-line strong { color: var(--success); font-size: 1.3rem; }
+        .b2b-card .price-line span { color: var(--text-secondary); font-size: 0.88rem; display: block; margin-top: 0.3rem; }
+
+        .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; }
+        .about-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.4rem;
+        }
+        .about-item h4 { color: var(--accent); font-size: 0.95rem; margin-bottom: 0.4rem; }
+        .about-item p { color: var(--text-secondary); font-size: 0.88rem; }
+
+        .principle-list { max-width: 720px; margin: 0 auto; }
+        .principle-list li {
+            list-style: none;
+            padding: 1rem 1.25rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            position: relative;
+            padding-left: 3rem;
+        }
+        .principle-list li::before {
+            content: '→';
+            position: absolute;
+            left: 1.25rem;
+            top: 1rem;
+            color: var(--accent);
+            font-weight: 700;
+        }
+        .principle-list li strong { color: var(--text-primary); }
+
+        .contact-section { text-align: center; }
+        .contact-section .channels { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
+        .contact-section .channels a {
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 0.85rem 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+        .contact-section .channels a:hover { border-color: var(--accent); color: var(--accent); }
+
+        footer { border-top: 1px solid var(--border); padding: 2.5rem 0; text-align: center; color: var(--text-secondary); font-size: 0.85rem; }
+        footer a { color: var(--text-secondary); text-decoration: none; }
+        footer a:hover { color: var(--accent); }
+        footer .footer-links { margin-bottom: 1rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+
+        [lang-en], [lang-ru] { display: none; }
+        body.lang-en [lang-en] { display: initial; }
+        body.lang-ru [lang-ru] { display: initial; }
+        body.lang-en h1[lang-en], body.lang-ru h1[lang-ru],
+        body.lang-en h2[lang-en], body.lang-ru h2[lang-ru],
+        body.lang-en h3[lang-en], body.lang-ru h3[lang-ru],
+        body.lang-en h4[lang-en], body.lang-ru h4[lang-ru],
+        body.lang-en p[lang-en], body.lang-ru p[lang-ru],
+        body.lang-en div[lang-en], body.lang-ru div[lang-ru],
+        body.lang-en li[lang-en], body.lang-ru li[lang-ru],
+        body.lang-en span[lang-en], body.lang-ru span[lang-ru] { display: block; }
+        body.lang-en span[lang-en], body.lang-ru span[lang-ru] { display: inline; }
+
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 1.85rem; }
+            .hero p.lead { font-size: 1rem; }
+            .section-header h2 { font-size: 1.5rem; }
+            section { padding: 2.5rem 0; }
+        }
+    </style>
+</head>
+<body class="lang-en">
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="brand">Capt. Tymur <span>Maritime Consulting</span></a>
+            <nav class="nav">
+                <a href="#seafarers" lang-en>For Seafarers</a>
+                <a href="#seafarers" lang-ru>Морякам</a>
+                <a href="#owners" lang-en>For Owners</a>
+                <a href="#owners" lang-ru>Судовладельцам</a>
+                <a href="#about" lang-en>About</a>
+                <a href="#about" lang-ru>О консультанте</a>
+                <a href="https://academy.capt-tymur.com/" target="_blank" rel="noopener">Academy ↗</a>
+                <div class="lang-toggle">
+                    <button class="active" onclick="setLang('en')" id="btn-en">EN</button>
+                    <button onclick="setLang('ru')" id="btn-ru">RU</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="border-top: none;">
+            <div class="container">
+                <div class="eyebrow" lang-en>Independent maritime consulting</div>
+                <div class="eyebrow" lang-ru>Независимый морской консалтинг</div>
+
+                <h1 lang-en>Clarity for your next maritime decision — career or operational.</h1>
+                <h1 lang-ru>Ясность в следующем морском решении — карьерном или операционном.</h1>
+
+                <p class="lead" lang-en>
+                    Master Mariner, three years in technical management, working freight broker. I work with two audiences: seafarers shaping their career, and owners who need an independent view of how their vessels actually perform.
+                </p>
+                <p class="lead" lang-ru>
+                    Капитан дальнего плавания, три года в техническом менеджменте, действующий фрахтовый брокер. Работаю с двумя аудиториями: моряки, формирующие карьеру, и судовладельцы, которым нужен независимый взгляд на то, как реально работают их суда.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#seafarers" class="btn-primary" lang-en>Career diagnostic</a>
+                    <a href="#seafarers" class="btn-primary" lang-ru>Карьерная диагностика</a>
+                    <a href="#owners" class="btn-secondary" lang-en>Owner-side diagnostic</a>
+                    <a href="#owners" class="btn-secondary" lang-ru>Диагностика для судовладельца</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="seafarers">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow" lang-en>For seafarers</div>
+                    <div class="eyebrow" lang-ru>Для моряков</div>
+                    <h2 lang-en>Three productized consultations</h2>
+                    <h2 lang-ru>Три прикладных консультации</h2>
+                    <p lang-en>Not "talk to a captain" — get clarity, a plan, and a working artifact for your next career step.</p>
+                    <p lang-ru>Не «поговорить с капитаном» — получить ясность, план и рабочий артефакт для следующего карьерного шага.</p>
+                </div>
+
+                <div class="offers-grid">
+                    <div class="offer-card">
+                        <h3 lang-en>Career Diagnostic</h3>
+                        <h3 lang-ru>Карьерная диагностика</h3>
+                        <p class="for-whom" lang-en>Cadet · Junior officer · ETO at a decision point</p>
+                        <p class="for-whom" lang-ru>Кадет · младший офицер · ETO в точке выбора</p>
+                        <div class="price">$150</div>
+                        <div class="price-note" lang-en>60 minutes + written memo</div>
+                        <div class="price-note" lang-ru>60 минут + письменное memo</div>
+                        <ul>
+                            <li lang-en>Strategy assessment</li>
+                            <li lang-ru>Оценка стратегии</li>
+                            <li lang-en>Risk map</li>
+                            <li lang-ru>Карта рисков</li>
+                            <li lang-en>12-month plan</li>
+                            <li lang-ru>План на 12 месяцев</li>
+                            <li lang-en>3-5 concrete next actions</li>
+                            <li lang-ru>3-5 конкретных следующих действий</li>
+                        </ul>
+                        <a href="mailto:consult@capt-tymur.com?subject=Career%20Diagnostic%20%E2%80%94%20booking%20request" class="btn" lang-en>Book a slot</a>
+                        <a href="mailto:consult@capt-tymur.com?subject=Career%20Diagnostic%20%E2%80%94%20booking%20request" class="btn" lang-ru>Забронировать</a>
+                    </div>
+
+                    <div class="offer-card featured" data-badge="Most requested">
+                        <h3 lang-en>Shore Transition</h3>
+                        <h3 lang-ru>Переход на берег</h3>
+                        <p class="for-whom" lang-en>Senior officer / Master considering shore-side roles</p>
+                        <p class="for-whom" lang-ru>Старпом / капитан, рассматривающий береговые роли</p>
+                        <div class="price">$200</div>
+                        <div class="price-note" lang-en>Diagnostic · $400-500 follow-up package available</div>
+                        <div class="price-note" lang-ru>Диагностика · пакет сопровождения $400-500</div>
+                        <ul>
+                            <li lang-en>Realistic shore-side roles</li>
+                            <li lang-ru>Реалистичные береговые роли</li>
+                            <li lang-en>CV / LinkedIn direction</li>
+                            <li lang-ru>Направление CV / LinkedIn</li>
+                            <li lang-en>Market scan</li>
+                            <li lang-ru>Сканирование рынка</li>
+                            <li lang-en>Interview preparation route</li>
+                            <li lang-ru>Маршрут подготовки к собеседованию</li>
+                        </ul>
+                        <a href="mailto:consult@capt-tymur.com?subject=Shore%20Transition%20Diagnostic%20%E2%80%94%20booking%20request" class="btn" lang-en>Book a slot</a>
+                        <a href="mailto:consult@capt-tymur.com?subject=Shore%20Transition%20Diagnostic%20%E2%80%94%20booking%20request" class="btn" lang-ru>Забронировать</a>
+                    </div>
+
+                    <div class="offer-card">
+                        <h3 lang-en>Command Transition Sprint</h3>
+                        <h3 lang-ru>Старпом → капитан</h3>
+                        <p class="for-whom" lang-en>Chief Officer before first command or new vessel type</p>
+                        <p class="for-whom" lang-ru>Старпом перед первым контрактом капитана или новым типом судна</p>
+                        <div class="price">from $1,600</div>
+                        <div class="price-note" lang-en>Individual premium-format · multi-session</div>
+                        <div class="price-note" lang-ru>Индивидуальный premium-format · несколько сессий</div>
+                        <ul>
+                            <li lang-en>Master's decision-making frame</li>
+                            <li lang-ru>Капитанская рамка принятия решений</li>
+                            <li lang-en>Office communication under pressure</li>
+                            <li lang-ru>Коммуникация с офисом под давлением</li>
+                            <li lang-en>Cargo / ballast / deck readiness</li>
+                            <li lang-ru>Cargo / ballast / deck readiness</li>
+                            <li lang-en>First voyage plan + artifacts after each session</li>
+                            <li lang-ru>План первого рейса + артефакты после каждой сессии</li>
+                        </ul>
+                        <a href="mailto:consult@capt-tymur.com?subject=Command%20Transition%20Sprint%20%E2%80%94%20inquiry" class="btn" lang-en>Request a slot</a>
+                        <a href="mailto:consult@capt-tymur.com?subject=Command%20Transition%20Sprint%20%E2%80%94%20inquiry" class="btn" lang-ru>Запросить</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="owners" class="b2b-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow" lang-en>For shipowners</div>
+                    <div class="eyebrow" lang-ru>Для судовладельцев</div>
+                    <h2 lang-en>Independent view of how your vessels actually perform</h2>
+                    <h2 lang-ru>Независимый взгляд на то, как реально работают ваши суда</h2>
+                    <p lang-en>Do you have a clear independent view of whether your vessels and management controls are actually performing as reported?</p>
+                    <p lang-ru>Есть ли у вас ясный независимый взгляд на то, действительно ли ваши суда и управленческие контуры работают так, как об этом отчитываются?</p>
+                </div>
+
+                <div class="b2b-card">
+                    <h3 lang-en>Remote Maritime Operations Diagnostic</h3>
+                    <h3 lang-ru>Remote Maritime Operations Diagnostic</h3>
+                    <p class="for-whom" lang-en>Owner representative · operating partner · capital-side stakeholder with control over a shipping asset</p>
+                    <p class="for-whom" lang-ru>Owner representative · operating partner · capital-side stakeholder с контролем над судном или активом</p>
+
+                    <div class="pillars">
+                        <div class="pillar">
+                            <h4 lang-en>Reported vs. actual readiness</h4>
+                            <h4 lang-ru>Reported vs. actual readiness</h4>
+                            <p lang-en>What office paperwork shows vs. what the vessel can actually do.</p>
+                            <p lang-ru>Что показывают офисные отчёты против того, что судно реально может.</p>
+                        </div>
+                        <div class="pillar">
+                            <h4 lang-en>Principal-agent gap</h4>
+                            <h4 lang-ru>Principal-agent gap</h4>
+                            <p lang-en>Where the manager's incentives drift from the owner's interest.</p>
+                            <p lang-ru>Где интересы менеджера расходятся с интересами owner'а.</p>
+                        </div>
+                        <div class="pillar">
+                            <h4 lang-en>Promoted-officer readiness</h4>
+                            <h4 lang-ru>Promoted-officer readiness</h4>
+                            <p lang-en>Whether new Masters and Chief Mates can carry the load.</p>
+                            <p lang-ru>Готовы ли новые капитаны и старпомы реально нести нагрузку.</p>
+                        </div>
+                        <div class="pillar">
+                            <h4 lang-en>Inspection readiness</h4>
+                            <h4 lang-ru>Inspection readiness</h4>
+                            <p lang-en>PSC / vetting / class — without last-minute theater.</p>
+                            <p lang-ru>PSC / vetting / class — без аврального театра.</p>
+                        </div>
+                    </div>
+
+                    <div class="price-line">
+                        <strong lang-en>$1,000 – $5,000</strong>
+                        <strong lang-ru>$1,000 – $5,000</strong>
+                        <span lang-en>Document review · call · written memo · follow-up call. Scope agreed before the work starts.</span>
+                        <span lang-ru>Document review · созвон · письменное memo · follow-up call. Объём фиксируется до начала работы.</span>
+                    </div>
+
+                    <a href="mailto:consult@capt-tymur.com?subject=Remote%20Maritime%20Operations%20Diagnostic%20%E2%80%94%20inquiry" class="btn-primary" style="display:block; text-align:center;" lang-en>Open a conversation</a>
+                    <a href="mailto:consult@capt-tymur.com?subject=Remote%20Maritime%20Operations%20Diagnostic%20%E2%80%94%20inquiry" class="btn-primary" style="display:block; text-align:center;" lang-ru>Открыть разговор</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow" lang-en>About the consultant</div>
+                    <div class="eyebrow" lang-ru>О консультанте</div>
+                    <h2 lang-en>Tymur Rudov — Master Mariner, consultant, freight broker</h2>
+                    <h2 lang-ru>Тимур Рудов — капитан, консультант, фрахтовый брокер</h2>
+                    <p lang-en>Sea-going experience as Master on bulk carriers and general cargo. Three years in technical management running fleet operations. Currently working as a freight broker — meaning the market view is current, not historical.</p>
+                    <p lang-ru>Морской опыт капитана на балкерах и генгрузе. Три года в техническом менеджменте управления флотом. Сейчас действующий фрахтовый брокер — рынок виден не по архивам, а в реальном времени.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-item">
+                        <h4 lang-en>Sea-going</h4>
+                        <h4 lang-ru>Море</h4>
+                        <p lang-en>Master Mariner. Bulk + general cargo. Worldwide trading.</p>
+                        <p lang-ru>Master Mariner. Балкеры + генгруз. Мировой трейдинг.</p>
+                    </div>
+                    <div class="about-item">
+                        <h4 lang-en>Shore-side</h4>
+                        <h4 lang-ru>Берег</h4>
+                        <p lang-en>3 years in technical management. Office mechanics, owner relations, audit cycles.</p>
+                        <p lang-ru>3 года в техническом менеджменте. Офисная механика, owner relations, аудитные циклы.</p>
+                    </div>
+                    <div class="about-item">
+                        <h4 lang-en>Market</h4>
+                        <h4 lang-ru>Рынок</h4>
+                        <p lang-en>Active freight broker. Live view of cargo flows, rates, and how owners actually behave.</p>
+                        <p lang-ru>Действующий фрахтовый брокер. Живой взгляд на грузопотоки, ставки и реальное поведение owner'ов.</p>
+                    </div>
+                    <div class="about-item">
+                        <h4 lang-en>Educator</h4>
+                        <h4 lang-ru>Преподаватель</h4>
+                        <p lang-en><a href="https://academy.capt-tymur.com/" target="_blank" rel="noopener" style="color: var(--accent);">Maritime Academy</a> — full course programme for officers.</p>
+                        <p lang-ru><a href="https://academy.capt-tymur.com/" target="_blank" rel="noopener" style="color: var(--accent);">Maritime Academy</a> — полная программа курсов для офицеров.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow" lang-en>How I work</div>
+                    <div class="eyebrow" lang-ru>Как я работаю</div>
+                    <h2 lang-en>Five principles, applied to every consultation</h2>
+                    <h2 lang-ru>Пять принципов, применяемых к каждой консультации</h2>
+                </div>
+
+                <ul class="principle-list">
+                    <li>
+                        <span lang-en><strong>Bounded result, not a conversation.</strong> Each engagement has a defined deliverable — memo, plan, checklist, or roadmap.</span>
+                        <span lang-ru><strong>Ограниченный результат, не разговор.</strong> У каждой работы есть конкретный артефакт — memo, план, чек-лист, дорожная карта.</span>
+                    </li>
+                    <li>
+                        <span lang-en><strong>Honest scope before payment.</strong> Format, price, boundary and what is <em>not</em> included — fixed in writing before the call.</span>
+                        <span lang-ru><strong>Честный объём до оплаты.</strong> Формат, цена, граница и что <em>не</em> входит — фиксируются письменно до созвона.</span>
+                    </li>
+                    <li>
+                        <span lang-en><strong>Independence.</strong> No commission from third parties on consulting work. The advice serves you, not a placement chain.</span>
+                        <span lang-ru><strong>Независимость.</strong> Никаких комиссий от третьих сторон на консультационной работе. Совет служит вам, а не цепочке размещений.</span>
+                    </li>
+                    <li>
+                        <span lang-en><strong>Every consultation leaves an artifact.</strong> The reusable document — for you, not just a Zoom that dissolves.</span>
+                        <span lang-ru><strong>Каждая консультация оставляет артефакт.</strong> Документ, которым вы пользуетесь, а не Zoom, который растворяется.</span>
+                    </li>
+                    <li>
+                        <span lang-en><strong>Clean close or a paid next step.</strong> Each engagement ends with either a clear paid next step or an honest close — no open-ended drift.</span>
+                        <span lang-ru><strong>Чистое закрытие или платный следующий шаг.</strong> Каждая работа заканчивается либо ясным платным следующим шагом, либо честным закрытием — без бесконечного дрейфа.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow" lang-en>Contact</div>
+                    <div class="eyebrow" lang-ru>Контакт</div>
+                    <h2 lang-en>Open a conversation</h2>
+                    <h2 lang-ru>Открыть разговор</h2>
+                    <p lang-en>Email is the primary channel. WhatsApp for quick clarifications.</p>
+                    <p lang-ru>Почта — основной канал. WhatsApp — для быстрых уточнений.</p>
+                </div>
+                <div class="channels">
+                    <a href="mailto:consult@capt-tymur.com">consult@capt-tymur.com</a>
+                    <a href="https://wa.me/35797617412" target="_blank" rel="noopener">WhatsApp +357 97 617 412</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://academy.capt-tymur.com/" target="_blank" rel="noopener">Maritime Academy</a>
+                <a href="mailto:consult@capt-tymur.com">Email</a>
+                <a href="https://wa.me/35797617412" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+            <div lang-en>© Captain Tymur Rudov. Independent maritime consulting.</div>
+            <div lang-ru>© Capt. Tymur Rudov. Независимый морской консалтинг.</div>
+        </div>
+    </footer>
+
+    <script>
+        function setLang(lang) {
+            document.body.classList.remove('lang-en', 'lang-ru');
+            document.body.classList.add('lang-' + lang);
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+            document.documentElement.lang = lang;
+            try { localStorage.setItem('consult-lang', lang); } catch (e) {}
+        }
+        (function () {
+            let saved = null;
+            try { saved = localStorage.getItem('consult-lang'); } catch (e) {}
+            if (saved === 'ru' || saved === 'en') {
+                setLang(saved);
+            } else if ((navigator.language || '').toLowerCase().startsWith('ru')) {
+                setLang('ru');
+            }
+        })();
+    </script>
+</body>
+</html>
