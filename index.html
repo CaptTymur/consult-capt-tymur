@@ -269,17 +269,15 @@
         footer .footer-links { margin-bottom: 1rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
 
         [lang-en], [lang-ru] { display: none; }
-        body.lang-en [lang-en] { display: initial; }
-        body.lang-ru [lang-ru] { display: initial; }
         body.lang-en h1[lang-en], body.lang-ru h1[lang-ru],
         body.lang-en h2[lang-en], body.lang-ru h2[lang-ru],
         body.lang-en h3[lang-en], body.lang-ru h3[lang-ru],
         body.lang-en h4[lang-en], body.lang-ru h4[lang-ru],
         body.lang-en p[lang-en], body.lang-ru p[lang-ru],
         body.lang-en div[lang-en], body.lang-ru div[lang-ru],
-        body.lang-en li[lang-en], body.lang-ru li[lang-ru],
-        body.lang-en span[lang-en], body.lang-ru span[lang-ru] { display: block; }
+        body.lang-en li[lang-en], body.lang-ru li[lang-ru] { display: block; }
         body.lang-en span[lang-en], body.lang-ru span[lang-ru] { display: inline; }
+        body.lang-en [lang-ru], body.lang-ru [lang-en] { display: none !important; }
 
         @media (max-width: 700px) {
             .hero h1 { font-size: 1.85rem; }
@@ -312,8 +310,7 @@
     <main>
         <section class="hero" style="border-top: none;">
             <div class="container">
-                <div class="eyebrow" lang-en>Independent maritime consulting</div>
-                <div class="eyebrow" lang-ru>Независимый морской консалтинг</div>
+                <div class="eyebrow"><span lang-en>Independent maritime consulting</span><span lang-ru>Независимый морской консалтинг</span></div>
 
                 <h1 lang-en>Clarity for your next maritime decision — career or operational.</h1>
                 <h1 lang-ru>Ясность в следующем морском решении — карьерном или операционном.</h1>
@@ -326,10 +323,8 @@
                 </p>
 
                 <div class="hero-cta">
-                    <a href="#seafarers" class="btn-primary" lang-en>Career diagnostic</a>
-                    <a href="#seafarers" class="btn-primary" lang-ru>Карьерная диагностика</a>
-                    <a href="#owners" class="btn-secondary" lang-en>Owner-side diagnostic</a>
-                    <a href="#owners" class="btn-secondary" lang-ru>Диагностика для судовладельца</a>
+                    <a href="#seafarers" class="btn-primary"><span lang-en>Career diagnostic</span><span lang-ru>Карьерная диагностика</span></a>
+                    <a href="#owners" class="btn-secondary"><span lang-en>Owner-side diagnostic</span><span lang-ru>Диагностика для судовладельца</span></a>
                 </div>
             </div>
         </section>
@@ -337,8 +332,7 @@
         <section id="seafarers">
             <div class="container">
                 <div class="section-header">
-                    <div class="eyebrow" lang-en>For seafarers</div>
-                    <div class="eyebrow" lang-ru>Для моряков</div>
+                    <div class="eyebrow"><span lang-en>For seafarers</span><span lang-ru>Для моряков</span></div>
                     <h2 lang-en>Three productized consultations</h2>
                     <h2 lang-ru>Три прикладных консультации</h2>
                     <p lang-en>Not "talk to a captain" — get clarity, a plan, and a working artifact for your next career step.</p>
@@ -364,8 +358,7 @@
                             <li lang-en>3-5 concrete next actions</li>
                             <li lang-ru>3-5 конкретных следующих действий</li>
                         </ul>
-                        <a href="mailto:consult@capt-tymur.com?subject=Career%20Diagnostic%20%E2%80%94%20booking%20request" class="btn" lang-en>Book a slot</a>
-                        <a href="mailto:consult@capt-tymur.com?subject=Career%20Diagnostic%20%E2%80%94%20booking%20request" class="btn" lang-ru>Забронировать</a>
+                        <a href="mailto:consult@capt-tymur.com?subject=Career%20Diagnostic%20%E2%80%94%20booking%20request" class="btn"><span lang-en>Book a slot</span><span lang-ru>Забронировать</span></a>
                     </div>
 
                     <div class="offer-card featured" data-badge="Most requested">
@@ -386,8 +379,7 @@
                             <li lang-en>Interview preparation route</li>
                             <li lang-ru>Маршрут подготовки к собеседованию</li>
                         </ul>
-                        <a href="mailto:consult@capt-tymur.com?subject=Shore%20Transition%20Diagnostic%20%E2%80%94%20booking%20request" class="btn" lang-en>Book a slot</a>
-                        <a href="mailto:consult@capt-tymur.com?subject=Shore%20Transition%20Diagnostic%20%E2%80%94%20booking%20request" class="btn" lang-ru>Забронировать</a>
+                        <a href="mailto:consult@capt-tymur.com?subject=Shore%20Transition%20Diagnostic%20%E2%80%94%20booking%20request" class="btn"><span lang-en>Book a slot</span><span lang-ru>Забронировать</span></a>
                     </div>
 
                     <div class="offer-card">
@@ -408,8 +400,7 @@
                             <li lang-en>First voyage plan + artifacts after each session</li>
                             <li lang-ru>План первого рейса + артефакты после каждой сессии</li>
                         </ul>
-                        <a href="mailto:consult@capt-tymur.com?subject=Command%20Transition%20Sprint%20%E2%80%94%20inquiry" class="btn" lang-en>Request a slot</a>
-                        <a href="mailto:consult@capt-tymur.com?subject=Command%20Transition%20Sprint%20%E2%80%94%20inquiry" class="btn" lang-ru>Запросить</a>
+                        <a href="mailto:consult@capt-tymur.com?subject=Command%20Transition%20Sprint%20%E2%80%94%20inquiry" class="btn"><span lang-en>Request a slot</span><span lang-ru>Запросить</span></a>
                     </div>
                 </div>
             </div>
@@ -418,8 +409,7 @@
         <section id="owners" class="b2b-section">
             <div class="container">
                 <div class="section-header">
-                    <div class="eyebrow" lang-en>For shipowners</div>
-                    <div class="eyebrow" lang-ru>Для судовладельцев</div>
+                    <div class="eyebrow"><span lang-en>For shipowners</span><span lang-ru>Для судовладельцев</span></div>
                     <h2 lang-en>Independent view of how your vessels actually perform</h2>
                     <h2 lang-ru>Независимый взгляд на то, как реально работают ваши суда</h2>
                     <p lang-en>Do you have a clear independent view of whether your vessels and management controls are actually performing as reported?</p>
@@ -466,8 +456,7 @@
                         <span lang-ru>Document review · созвон · письменное memo · follow-up call. Объём фиксируется до начала работы.</span>
                     </div>
 
-                    <a href="mailto:consult@capt-tymur.com?subject=Remote%20Maritime%20Operations%20Diagnostic%20%E2%80%94%20inquiry" class="btn-primary" style="display:block; text-align:center;" lang-en>Open a conversation</a>
-                    <a href="mailto:consult@capt-tymur.com?subject=Remote%20Maritime%20Operations%20Diagnostic%20%E2%80%94%20inquiry" class="btn-primary" style="display:block; text-align:center;" lang-ru>Открыть разговор</a>
+                    <a href="mailto:consult@capt-tymur.com?subject=Remote%20Maritime%20Operations%20Diagnostic%20%E2%80%94%20inquiry" class="btn-primary" style="display:block; text-align:center;"><span lang-en>Open a conversation</span><span lang-ru>Открыть разговор</span></a>
                 </div>
             </div>
         </section>
@@ -475,8 +464,7 @@
         <section id="about">
             <div class="container">
                 <div class="section-header">
-                    <div class="eyebrow" lang-en>About the consultant</div>
-                    <div class="eyebrow" lang-ru>О консультанте</div>
+                    <div class="eyebrow"><span lang-en>About the consultant</span><span lang-ru>О консультанте</span></div>
                     <h2 lang-en>Tymur Rudov — Master Mariner, consultant, freight broker</h2>
                     <h2 lang-ru>Тимур Рудов — капитан, консультант, фрахтовый брокер</h2>
                     <p lang-en>Sea-going experience as Master on bulk carriers and general cargo. Three years in technical management running fleet operations. Currently working as a freight broker — meaning the market view is current, not historical.</p>
@@ -515,8 +503,7 @@
         <section>
             <div class="container">
                 <div class="section-header">
-                    <div class="eyebrow" lang-en>How I work</div>
-                    <div class="eyebrow" lang-ru>Как я работаю</div>
+                    <div class="eyebrow"><span lang-en>How I work</span><span lang-ru>Как я работаю</span></div>
                     <h2 lang-en>Five principles, applied to every consultation</h2>
                     <h2 lang-ru>Пять принципов, применяемых к каждой консультации</h2>
                 </div>
@@ -549,8 +536,7 @@
         <section id="contact" class="contact-section">
             <div class="container">
                 <div class="section-header">
-                    <div class="eyebrow" lang-en>Contact</div>
-                    <div class="eyebrow" lang-ru>Контакт</div>
+                    <div class="eyebrow"><span lang-en>Contact</span><span lang-ru>Контакт</span></div>
                     <h2 lang-en>Open a conversation</h2>
                     <h2 lang-ru>Открыть разговор</h2>
                     <p lang-en>Email is the primary channel. WhatsApp for quick clarifications.</p>
